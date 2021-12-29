@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <title>AutoRef.js</title>
+    <link rel="icon" href="Logo.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="The simplest JavaScript library making the work easier in creating hyperlinks in HTML">
+    <meta name="keywords" content="JavaScript, Anchor, html, Easiest">
+    <meta name="author" content="Arnav Gumber">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" property="og:title" content="AutoRef.js - Makes the work much easier in creating hyperlinks in HTML">
+    <style>
+        #title {
+            font-size: 350%;
+            color: black;
+            text-shadow: 3px 3px cyan;
+        }
+        #use, #what, #supported, #demo {
+            font-size: 250%;
+            margin-left: 2%;
+            font-style: italic;
+        }
+
+        #add, #do {
+            font-size: 175%;
+            margin-left: 4%;
+            font-variant: small-caps;
+        }
+        #logoImg {
+            height: auto;
+            width: 40%;
+            float: right;
+            padding-right: 30px;
+        }
+
+        #code {
+            font-size: 110%;
+            font-stretch: extra-expanded;
+            margin-left: 10%;
+        }
+        #copyBtn {
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            padding: 0 10px 0 10px;
+            font-size: 150%;
+            cursor: pointer;
+        }
+        #done, #easy {
+            font-size: 150%;
+            font-style: oblique;
+            margin-left: 5%;
+        }
+        #example, #output {
+            font-size: 200%;
+            margin-left: 3%;
+        }
+        #supcol {
+            margin-left: 5%;
+            width: 90%;
+            font-size: 125%;
+        }
+    </style>
+</head>
+<body>
+    <img src="Logo.png" alt="Logo" height="70px" width="70px" style="position: absolute;">
+    <center>
+        <p id="title">AutoRef<i>.js</i></p>
+    </center>
+</center>
+<hr style="width: 75%;">
+<img src="Logo.png" alt="Logo" id="logoImg">
+<p id="use">How to use:</p>
+    <p id="add">Just add the following code after ending the &#60;body&#62; tag -</p>
+    <input type="text" id="code" value="<script src='https://arnavgumber.github.io/autorefjs/autoref.js'></script>">
+    <button id="copyBtn" onclick="copyText()">Copy</button>
+    <p id="what">What it does:</p>
+    <p id="do">Just place 'ref' attribute in your anchor (&#60;a&#62;) tag to open the url in the destination as it's value</p>
+    <p id="example">Example - <code><br>&#60;!&minus;&minus;This will open the url in the same destination as it's value&minus;&minus;&#62;<br>&#60;a ref&#62;https://www.google.com&#60;/a&#62;</code></p>
+    <p id="output">Output - <span><a href="https://www.google.com" target="_blank">https://www.google.com</a></span></p>
+    <br>
+</body>
+<script>
+    function copyText() {
+        let code = document.getElementById("code");
+        code.select();
+        document.execCommand("copy");
+        document.getElementById("copyBtn").innerHTML = "Copied";
+        setInterval(function() {
+            document.getElementById("copyBtn").innerHTML = "Copy";
+        }, 10000);
+    }
+</script>
+</html>
